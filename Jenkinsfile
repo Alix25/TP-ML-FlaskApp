@@ -4,8 +4,7 @@ pipeline {
     stage('Create Staging branch'){
       steps{
         echo 'Create Staging branch'
-        sh 'git branch --delete staging'
-        sh 'git branch staging'
+        sh 'git checkout staging'
         sh 'git checkout dev'
         sh 'git pull'
         sh 'git push origin staging'
