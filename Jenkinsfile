@@ -18,7 +18,7 @@ pipeline {
     }
     stage('test'){
       steps{
-        sh 'python3 test_main.py'
+        sh 'python test_main.py'
       }
     } 
     stage('deploy'){
