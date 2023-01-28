@@ -8,11 +8,11 @@ pipeline {
         bat 'git checkout dev'
         bat 'git pull'
         bat 'git checkout -b staging'
-        // withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'Alix25', passwordVariable: 'ToTheStars33')]) {
-        //   script {
-        //       bat 'git push --set-upstream origin staging' 
-        //   }
-        // }
+        withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'Alix25', passwordVariable: 'ToTheStars33')]) {
+          script {
+              bat 'git push --set-upstream origin staging' 
+          }
+        }
       }
     }
     stage('build'){
@@ -40,7 +40,7 @@ pipeline {
         bat 'git checkout main'
         bat 'git pull origin main'
         bat 'git merge origin/dev'  
-        //bat 'git push origin main' 
+        bat 'git push origin main' 
       } 
     }  
   } 
