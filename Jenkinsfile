@@ -4,6 +4,7 @@ pipeline {
     stage('Create Staging branch'){
       steps{
         echo 'Create Staging branch'
+        bat 'git branch -d staging'
         bat 'git checkout dev'
         bat 'git pull'
         bat 'git checkout -b staging'
