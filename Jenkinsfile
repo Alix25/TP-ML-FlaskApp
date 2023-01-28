@@ -18,7 +18,7 @@ pipeline {
     stage('test'){
       steps{
         sh 'python test_main.py'
-      }
+      } 
     } 
     stage('deploy'){
       steps{
