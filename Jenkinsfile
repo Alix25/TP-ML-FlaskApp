@@ -33,7 +33,7 @@ pipeline {
         bat 'git checkout main'
         bat 'git pull origin main'
         bat 'git merge origin/staging'
-        bat 'git push origin main'
+        bat 'git push origin main' 
       } 
     }  
   } 
