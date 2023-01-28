@@ -7,7 +7,7 @@ pipeline {
         bat 'git checkout staging'
         bat 'git checkout dev'
         bat 'git pull'
-        bat 'git push origin staging'
+        bat 'git push --set-upstream origin staging'
       }
     }
     stage('build'){
