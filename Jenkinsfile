@@ -14,7 +14,7 @@ pipeline {
       steps{
         bat 'pip install -r requirements.txt'
       } 
-    }
+    } 
     stage('test'){
       steps{
         bat 'python test_main.py'
