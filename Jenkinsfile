@@ -38,7 +38,7 @@ pipeline {
         bat 'git config --global user.name "Alix25"'
         bat 'git checkout main'
         bat 'git pull origin main'
-        bat 'git merge origin/dev' 
+        bat 'git merge origin/dev'  
         //bat 'git push origin main' 
       } 
     }  
