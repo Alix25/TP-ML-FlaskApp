@@ -27,9 +27,9 @@ pipeline {
     stage('deploy'){
       steps{
         bat 'docker login --username=alixs --password=zD96ZkxqGWRHd5c'
-        bat 'docker build -t tp-jenkinsFlask .'
-        bat 'docker tag tp-jenkinsFlask alixs/tp-jenkinsFlask:v1.0'
-        bat 'docker push alixs/tp-jenkinsFlask:v1.0'
+        bat 'docker build -t tp-jenkinsflask .'
+        bat 'docker tag tp-jenkinsflask alixs/tp-jenkinsflask:v1.0'
+        bat 'docker push alixs/tp-jenkinsflask:v1.0'
       }
     }
     stage('merge to main'){
