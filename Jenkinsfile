@@ -8,6 +8,7 @@ pipeline {
         sh 'git checkout dev'
         sh 'git pull'
         sh 'git push origin staging'
+        echo "Staging Created"
       }
     }
     stage('build'){
