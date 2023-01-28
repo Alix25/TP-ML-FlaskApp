@@ -34,6 +34,8 @@ pipeline {
     }
     stage('merge to main'){
       steps{
+        bat 'git config --global user.email "alix.stirling@efrei.net"'
+        bat 'git config --global user.name "Alix25"'
         bat 'git checkout main'
         bat 'git pull origin main'
         bat 'git merge origin/dev' 
